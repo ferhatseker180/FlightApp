@@ -1,0 +1,91 @@
+/* Ana header stil ayarları */
+.main-header {
+  background-color: #f8f9fa !important;
+  color: #343a40 !important;
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+
+/* Container stil ayarları */
+.container-fluid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  gap: 1rem; /* Aralıklar arasında boşluk */
+}
+
+/* Sol hizalı bölge */
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+/* Sağ hizalı bölge */
+.right-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Sağ hizalama */
+}
+
+/* Uçak simgesinin etrafındaki daire */
+.airplane-icon {
+  color: white !important;
+  background-color: rgb(111, 4, 111) !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 40px !important;
+  height: 40px !important;
+  font-size: 38px !important;
+  margin-right: 0.5rem !important;
+}
+
+/* İkon stili */
+.icon-style {
+  font-size: 24px !important;
+  color: purple !important;
+  padding: 4px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+/* Farklı ekran boyutları için responsive ayarları */
+@media (min-width: 576px) {
+  .airplane-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 48px;
+  }
+
+  .icon-style {
+    font-size: 28px;
+    padding: 6px;
+  }
+}
+
+@media (min-width: 768px) {
+  .airplane-icon {
+    width: 55px;
+    height: 55px;
+    font-size: 53px;
+  }
+
+  .icon-style {
+    font-size: 30px;
+    padding: 8px;
+  }
+}
+
+@media (min-width: 992px) {
+  .airplane-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 58px;
+  }
+
+  .icon-style {
+    font-size: 34px;
+    padding: 10px;
+  }
+}
