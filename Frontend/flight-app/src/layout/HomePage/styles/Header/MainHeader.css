@@ -30,7 +30,7 @@
 /* Uçak simgesinin etrafındaki daire */
 .airplane-icon {
   color: white !important;
-  background-color: rgb(111, 4, 111) !important;
+  background-color: indigo !important;
   border-radius: 50% !important;
   display: flex !important;
   align-items: center !important;
@@ -44,7 +44,7 @@
 /* İkon stili */
 .icon-style {
   font-size: 24px !important;
-  color: purple !important;
+  color: indigo !important;
   padding: 4px !important;
   display: inline-flex !important;
   align-items: center !important;
@@ -87,5 +87,26 @@
   .icon-style {
     font-size: 34px;
     padding: 10px;
+  }
+}
+
+/* Mobil uyumlu tasarım */
+@media (max-width: 575.98px) {
+  .container-fluid {
+    grid-template-columns: 1fr; /* Tek sütun mobil ekranlar için */
+    gap: 0.5rem; /* Aralıkları küçült */
+  }
+
+  .right-section {
+    justify-content: flex-start; /* Sağ hizalı bölümde sağ hizalamayı kaldır */
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column; /* Menü öğelerini dikey hizala */
+  }
+
+  .nav-item {
+    margin-bottom: 0.5rem; /* Menü öğeleri arasında boşluk bırak */
   }
 }

@@ -1,0 +1,163 @@
+.card {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    box-shadow: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap; /* Butonları ve başlığı aynı satırda tut */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+}
+
+.icon {
+    font-size: 20px;
+    color: black;
+}
+
+.header-content h2 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.button-group {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin-left: auto; /* Butonları sağa yasla */
+    flex-wrap: nowrap;
+}
+
+.switch-button {
+    border: 2px solid #ccc;
+    padding: 4px 0;
+    font-size: 0.8rem;
+    cursor: pointer;
+    border-radius: 0;
+    transition: background-color 0.3s, color 0.3s;
+    height: 30px;
+    width: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.switch-button.active {
+    background-color: indigo;
+    color: white;
+}
+
+.switch-button.inactive {
+    background-color: lightgray;
+    color: indigo;
+}
+
+.switch-button:first-child {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.switch-button:last-child {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/* Mobil uyumluluk */
+
+/* iPad ve benzeri tablet cihazlar için medya sorgusu */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .header-content {
+        /* İkonun ve başlığın hizalanmasını ayarla */
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 15px;
+    }
+
+    .icon {
+        font-size: 50px; /* İkon boyutunu ayarla */
+        position: relative;
+        left: 0; /* İkonun kaydırılmasını sıfırla */
+    }
+
+    .header-content h2 {
+        font-size: 1.6rem; /* Başlık boyutunu ayarla */
+    }
+
+    .button-group {
+        display: flex;
+        align-items: center;
+        margin-left: auto; /* Butonları sağa yasla */
+    }
+
+    .switch-button {
+        font-size: 1.2rem; /* Buton font boyutunu ayarla */
+        height: 35px; /* Buton yüksekliğini ayarla */
+        width: 100px; /* Buton genişliğini ayarla */
+    }
+}
+
+@media (max-width: 768px) and (min-width: 500px) {
+    .icon {
+        font-size: 18px;
+        position: relative;
+        left: -10px; /* İkonun sola kaydırılması */
+    }
+
+    .header-content h2 {
+        font-size: 1rem;
+    }
+
+    .button-group {
+        margin-left: auto; /* Butonları hizalama */
+        display: flex;
+        align-items: center; /* Butonları aynı satırda tut */
+    }
+
+    .switch-button {
+        font-size: 0.75rem;
+        height: 35px;
+        width: 80px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .icon {
+        font-size: 16px;
+        position: absolute;
+        left: 0px; /* İkonun sola kaydırılması */
+    }
+
+    .header-content h2 {
+        font-size: 0.7rem;
+        margin: 0px;
+        position: absolute;
+        left: 18px;
+    }
+
+    .button-group {
+        flex-direction: row;
+        gap: 0px;
+    }
+
+    .switch-button {
+        width: 60px;
+        position: relative;
+        left: 12px;
+    }
+}

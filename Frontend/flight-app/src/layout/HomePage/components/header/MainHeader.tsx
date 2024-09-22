@@ -1,10 +1,9 @@
-import React from "react";
+import React from 'react'
 import { IoAirplane as Airplane } from "react-icons/io5";
 import { GiEarthAmerica as Discover } from "react-icons/gi";
-import '../../styles/MainHeader.css';
+import '../../styles/Header/MainHeader.css';
 
 const MainHeader = () => {
-    
     return (
         <header className="main-header py-3 mb-3 border-bottom">
       <div className="container-fluid">
@@ -14,7 +13,7 @@ const MainHeader = () => {
             <div className="airplane-icon me-2">
               <Airplane />
             </div>
-            <span style={{ fontSize: '20px', fontWeight: 'bold', color: 'black' }}>
+            <span style={{ fontSize: '22px', color: 'black' }}>
               PLANE SCAPE
             </span>
           </a>
@@ -48,6 +47,6 @@ const MainHeader = () => {
       </div>
     </header>
     );
-  }
+}
 
-export default MainHeader;
+export default MainHeader
