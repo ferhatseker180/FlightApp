@@ -7,6 +7,7 @@ import {
 import { IoMdCalendar as Calendar } from "react-icons/io";
 import SearchHeader from "./SearchHeader";
 import "../../styles/FlightSearchBar/FlightSearchWidget.css";
+import FlightCard from "../flight-card/FlightCard";
 
 const roundTripLocationIcons = [PlaneDeparture, PlaneArrival];
 const roundTripDateIcons = [Calendar, Calendar];
@@ -26,6 +27,10 @@ const FlightSearchWidget = () => {
 
       <div>
         <button className="show-btn"> Show flights </button>
+      </div>
+
+      <div>
+        <FlightCard />
       </div>
     </div>
   );

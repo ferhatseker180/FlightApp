@@ -1,0 +1,170 @@
+.flight-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    width: 680px;
+    margin: 20px auto;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.flight-header {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.flight-header h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.flight-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    position: relative;
+}
+
+.flight-info div {
+    position: relative;
+    padding: 0 10px;
+    flex: 1;
+}
+
+/* departure ile flight-duration arasına yatay çizgi */
+.flight-info div:nth-child(2)::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -80px;
+    width: calc(30%);
+    height: 2px;
+    background-color: #888686;
+}
+
+/* flight-duration ile arrival arasına yatay çizgi */
+.flight-info div:nth-child(2)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -80px;
+    width: calc(30%);
+    height: 2px;
+    background-color: #888686;
+}
+
+.departure {
+    text-align: left;
+}
+
+.departure h4, .departure p {
+    margin: 0;
+}
+
+.flight-duration {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.flight-duration p {
+    margin: 0;
+    color: #777;
+}
+
+.arrival {
+    text-align: right;
+}
+
+.arrival h4, .arrival p {
+    margin: 0;
+}
+
+.airline-logo {
+    font-weight: bold;
+    color: green;
+}
+
+.plane-icon {
+    font-size: 1.5rem;
+    color: indigo;
+    margin: 5px 0;
+}
+
+.flight-price {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.flight-price p {
+    margin: 5px 0;
+    color: #333;
+}
+
+.flight-price strong {
+    color: indigo;
+}
+
+/* Round Trip yazısı Price'ın hemen altına gelecek şekilde sola yaslı */
+.round-trip {
+    margin: 0;
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: #777;
+    text-align: left;
+}
+
+/* Book Flight butonunu Price ve Round Trip ile aynı hizada olacak şekilde sağa yasla */
+.flight-price-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px; /* Daha sıkı görünmesi için */
+}
+
+.flight-price {
+    text-align: left;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.book-flight-btn {
+    background-color: indigo;
+    color: white;
+    padding: 20px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: auto; /* Sağda yer alacak şekilde hizala */
+}
+
+.book-flight-btn:hover {
+    background-color: darkpurple;
+}
+
+.details-link {
+    color: indigo;
+    text-decoration: none;
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    background-color: rgb(222, 221, 221);
+    padding: 10px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.details-link:hover {
+    text-decoration: underline;
+}
+
+.fly-icon {
+    font-size: 1.5rem;
+    color: indigo;
+}
